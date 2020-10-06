@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 public class BackArray {
     public static void main(String[] args) {
+
         String [] names = {"Petr", "Ivan", "Nik", "Vasya"};
         int middle = names.length / 2;
         for(int i = 0;i < middle;i++) {
