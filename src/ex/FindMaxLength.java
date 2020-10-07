@@ -12,6 +12,7 @@ public class FindMaxLength {
             } else if (el.length() > max) {
                 max += el.length();
             }
+
         }
         System.out.println("Max length : " + max);
     }
