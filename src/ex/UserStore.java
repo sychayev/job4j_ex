@@ -21,7 +21,7 @@ public class UserStore {
         if(user.isValid()!=true){
             throw new UserInvalidException();
         }
-        else if(user.getUsername() < String.length(3)){
+        else if(user.getUsername().length()<3){
             throw new UserInvalidException();
         }
         return false;
@@ -35,9 +35,9 @@ public class UserStore {
         User user = findUser(users, "Petr Arsentev");
         if (validate(user)) {
             System.out.println("This user has an access");}
-        }catch(UserNotFoundException e) {
+        }catch( UserInvalidException e) {
             e.printStackTrace();
-        }catch(UserInvalidException us ) {
+        }catch(UserNotFoundException us ) {
             us.printStackTrace();
         }
     }
